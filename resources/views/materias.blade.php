@@ -8,5 +8,19 @@
     <body>
         <!-- Comun -->
         @include('nav')
+        <br>
+        <center>
+        <div class="list-group">
+        @foreach($materias as $materia)
+            <div class="card" style="width: 25rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{ $materia->nombre }} <span class="badge badge-secondary">{{$materia->sigla}}</span> </h5>
+                <p class="card-text">Creditos: {{$materia->creditos}}</p>
+                <a href="/Materia/{{$materia->id}}" class="btn btn-primary">Ver</a>
+            </div>
+            </div>
+        @endforeach
+        </div>
+        <center>
     </body>
 </html>

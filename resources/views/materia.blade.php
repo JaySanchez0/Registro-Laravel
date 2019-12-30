@@ -8,5 +8,13 @@
     <body>
         <!-- Comun -->
         @include('nav')
+        <br>
+        <h1 style="text-align:center;">{{$materia->nombre}}</h1>
+        <br>
+        <center><ul class="list-group" style="width:30%;">
+        @foreach($materia->grupos()->get() as $grupo)
+        <li class="list-group-item">{{$materia->sigla}} {{$grupo->id}} {{$grupo->profesor}}</li>
+        @endforeach
+        <ul></center>
     </body>
 </html>

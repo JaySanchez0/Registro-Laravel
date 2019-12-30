@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('/Materia','MateriaController');
+Route::resource('/Grupo','GrupoController');
+Route::resource('/Profesor','GrupoController');
+Route::resource('/Tema','GrupoController');
